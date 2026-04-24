@@ -3,7 +3,7 @@ revision = 3
 requires-python = ">=3.14"
 
 [options]
-exclude-newer = "2026-04-17T20:35:30.988364388Z"
+exclude-newer = "2026-04-17T21:46:29.915975445Z"
 exclude-newer-span = "P1W"
 
 [[package]]
@@ -433,9 +433,9 @@ wheels = [
 ]
 
 [[package]]
-name = "minizen"
+name = "minizen-template"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "miniflux" },
     { name = "pydantic-ai-slim", extra = ["anthropic"] },

@@ -1,4 +1,4 @@
-from minizen.main import hello
+from minizen_template.main import hello
 
 
 def test_hello() -> None:
