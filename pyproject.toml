@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://hieudao-code.github.io/minizen-template/"
+Homepage = "https://github.com/hieudao-code/minizen-template"
 Issues = "https://github.com/hieudao-code/minizen-template/issues"
 
 [dependency-groups]
