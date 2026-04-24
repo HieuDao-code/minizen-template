@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "A quieter way to stay informed"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = ["anthropic>=0.94.1,<1.0.0", "miniflux>=1.1.6,<2.0.0"]
+dependencies = [
+ "miniflux>=1.1.6,<2.0.0",
+ "pydantic-ai-slim[anthropic]>=1.84.0,<2.0.0",
+]
 
 [dependency-groups]
 dev = [
