@@ -1,3 +1,14 @@
+## 0.2.0 (2026-04-24)
+
+### Feat
+
+- add PyPI publishing
+- add exclamation in title on breaking change commit with cz
+
+### Refactor
+
+- improve workflows to use uv
+
 ## 0.1.0 (2026-04-23)
 
 ### Feat
