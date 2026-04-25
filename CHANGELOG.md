@@ -1,3 +1,15 @@
+## 0.3.0 (2026-04-25)
+
+### Feat
+
+- **pre-commit**: add uv-lock to keep uv.lock in sync with pyproject.toml
+
+### Fix
+
+- remove fish from flake.nix, add just dev command
+- pin uv in workflows
+- pin dev dependencies
+
 ## 0.2.1 (2026-04-25)
 
 ### Fix
