@@ -12,3 +12,18 @@ To get started:
    - Setup [PyPI publishing](https://docs.astral.sh/uv/guides/integration/github/#publishing-to-pypi) for package distribution
 3. Enable [nix devshells](https://nix.dev/manual/nix/latest/command-ref/new-cli/nix3-develop) for development environment setup with `nix develop`
 4. Enable [pre-commit](https://pre-commit.com/) with `prek install`
+5. Reset versioning for your project by running the following script:
+
+```bash
+#!/usr/bin/env bash
+# Reset repository versioning to 0.0.0
+
+# Clear changelog
+echo "" > CHANGELOG.md
+
+# Update version in pyproject.toml
+sed -i 's/^version = "[^"]*"/version = "0.0.0"/' pyproject.toml
+
+# Update version in commitizen version_files (adjust path to match your package)
+sed -i 's/__version__ = "[^"]*"/__version__ = "0.0.0"/' src/<your-package>/__init__.py
+```
