@@ -112,20 +112,22 @@ combine-as-imports = true
 [tool.ruff.format]
 docstring-code-format = true
 
+[tool.coverage.run]
+branch = true
+source = ["minizen_template"]
+omit = ["*/minizen_template/main.py"]
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report=term-missing --cov-fail-under=100"
+testpaths = ["tests"]
+
 [tool.tox]
 env_list = ["py314", "commit-msg", "lint", "security", "typing"]
 
 [tool.tox.env_run_base]
 description = "Run tests"
 dependency_groups = ["dev"]
-commands = [
-  [
-    "pytest",
-    "--cov=minizen_template",
-    "--cov-report=term-missing",
-    "--cov-fail-under=100",
-  ],
-]
+commands = [["pytest"]]
 
 [tool.tox.env.commit-msg]
 description = "Run commitizen checks"
