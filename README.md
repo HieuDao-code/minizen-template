@@ -23,6 +23,6 @@ echo "" > CHANGELOG.md
 # Update version in pyproject.toml
 sed -i 's/^version = "[^"]*"/version = "0.0.0"/' pyproject.toml
 
-# Update version in commitizen version_files (adjust path to match your package)
-sed -i 's/__version__ = "[^"]*"/__version__ = "0.0.0"/' src/<your-package>/__init__.py
+# Update version in commitizen version_files
+sed -i 's/__version__ = "[^"]*"/__version__ = "0.0.0"/' src/minizen_template/__init__.py
 ```
