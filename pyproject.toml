@@ -5,7 +5,7 @@ build-backend = "uv_build"
 [project]
 name = "minizen-template"
 version = "0.3.0"
-description = "A quieter way to stay informed"
+description = "A template repo for python projects"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
