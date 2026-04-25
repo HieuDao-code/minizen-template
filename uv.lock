@@ -3,7 +3,7 @@ revision = 3
 requires-python = ">=3.14"
 
 [options]
-exclude-newer = "2026-04-18T07:07:32.429329333Z"
+exclude-newer = "2026-04-18T07:56:29.768461151Z"
 exclude-newer-span = "P1W"
 
 [[package]]
@@ -462,6 +462,9 @@ lint = [
     { name = "ty" },
     { name = "zizmor" },
 ]
+release = [
+    { name = "commitizen" },
+]
 test = [
     { name = "pytest" },
     { name = "pytest-cov" },
@@ -493,6 +496,7 @@ lint = [
     { name = "ty", specifier = ">=0.0.29,<1.0.0" },
     { name = "zizmor", specifier = ">=1.24.1,<2.0.0" },
 ]
+release = [{ name = "commitizen", specifier = ">=4.13.10,<5.0.0" }]
 test = [
     { name = "pytest", specifier = ">=9.0.3,<10.0.0" },
     { name = "pytest-cov", specifier = ">=7.1.0,<8.0.0" },
