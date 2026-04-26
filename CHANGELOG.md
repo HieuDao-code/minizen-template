@@ -1,3 +1,19 @@
+## 0.3.1 (2026-04-26)
+
+### Fix
+
+- **workflows**: only publish docs on release
+- auto open browser on `just docs`
+- readme setup script
+
+### Refactor
+
+- split dependency groups and tox environments
+
+### Perf
+
+- better hooks
+
 ## 0.3.0 (2026-04-25)
 
 ### Feat
