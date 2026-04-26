@@ -31,6 +31,17 @@ scheme = "slate"
 toggle.icon = "material/brightness-4"
 toggle.name = "Switch to system preference"
 
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/HieuDao-Code/minizen"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/python"
+link = "https://pypi.org/project/minizen"
+
+# ---------------------------------------------------------------------------
+# Extensions
+# ---------------------------------------------------------------------------
 [project.markdown_extensions.abbr]
 [project.markdown_extensions.attr_list]
 
@@ -42,6 +53,9 @@ pygments_lang_class = true
 [project.markdown_extensions.pymdownx.inlinehilite]
 [project.markdown_extensions.pymdownx.snippets]
 [project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
 
 [project.markdown_extensions.pymdownx.emoji]
 emoji_index = "zensical.extensions.emoji.twemoji"
