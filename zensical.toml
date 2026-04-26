@@ -33,11 +33,11 @@ toggle.name = "Switch to system preference"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
-link = "https://github.com/HieuDao-Code/minizen"
+link = "https://github.com/HieuDao-Code/minizen-template"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/python"
-link = "https://pypi.org/project/minizen"
+link = "https://pypi.org/project/minizen-template"
 
 # ---------------------------------------------------------------------------
 # Extensions
