@@ -48,8 +48,8 @@ dev = [
   { include-group = "test" },
   { include-group = "typing" },
 ]
-docs = ["zensical==0.0.32"]
-lint = ["ruff==0.15.10"]
+docs = ["zensical==0.0.36"]
+lint = ["ruff==0.15.11"]
 miscellaneous = ["prek==0.3.10"]
 release = ["commitizen==4.13.10"]
 security = ["zizmor==1.24.1"]
