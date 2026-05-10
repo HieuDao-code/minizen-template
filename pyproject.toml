@@ -25,10 +25,7 @@ classifiers = [
   "Topic :: Internet :: WWW/HTTP :: Dynamic Content :: News/Diary",
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
-dependencies = [
-  "miniflux>=1.1.6,<2.0.0",
-  "pydantic-ai-slim[anthropic]>=1.84.0,<2.0.0",
-]
+dependencies = []
 
 [project.urls]
 Homepage = "https://github.com/hieudao-code/minizen-template"
@@ -50,7 +47,7 @@ dev = [
 ]
 docs = ["zensical==0.0.39"]
 lint = ["ruff==0.15.12"]
-miscellaneous = ["prek==0.3.11"]
+miscellaneous = ["prek==0.3.12"]
 release = ["commitizen==4.15.0"]
 security = ["zizmor==1.24.1"]
 test = [
