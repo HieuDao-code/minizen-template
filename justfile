@@ -20,7 +20,7 @@ check:
 # Start development environment
 [group('Project')]
 dev:
-    nix develop -c fish
+    nix develop --command fish
 
 # Show docs
 [group('Project')]
@@ -31,11 +31,6 @@ docs:
 [group('Project')]
 fmt:
     ruff format
-
-# Run main script
-[group('Project')]
-run:
-    python main.py
 
 # Update dependencies, workflows, pre-commit hooks and nix flake
 [group('Project')]
