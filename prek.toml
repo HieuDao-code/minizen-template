@@ -6,29 +6,29 @@ cooldown_days = 7
 # ruff
 [[repos]]
 repo = "https://github.com/astral-sh/ruff-pre-commit"
-rev = "2700fd5671c633760d912769c041bfcde2b9a01b"                          # frozen: v0.15.22
+rev = "38bfb07c0c64c304f47eb52090f8288150c77730"                          # frozen: v0.17.1
 hooks = [{ id = "ruff-check", args = ["--fix"] }, { id = "ruff-format" }]
 
 # uv
 [[repos]]
 repo = "https://github.com/astral-sh/uv-pre-commit"
-rev = "b7359babf83a050dcd7bf892538f3df09c3d4ba6"    # frozen: 0.11.29
+rev = "d4acaec07ac3bc6017fba3c3b8e9810af1b615db"    # frozen: 0.13.1
 hooks = [{ id = "uv-audit" }, { id = "uv-lock" }]
 
 # zizmor
 [[repos]]
 repo = "https://github.com/zizmorcore/zizmor-pre-commit"
-rev = "64a97fb7fa63188393d3215c6e312f5f9c6d0f78"             # frozen: v1.27.0
+rev = "d25b2b1dc80689fb633f21f6978bba69871181d3"             # frozen: v1.31.0
 hooks = [{ id = "zizmor", args = ["--persona", "auditor"] }]
 
 # commitizen
 [[repos]]
 repo = "https://github.com/commitizen-tools/commitizen"
-rev = "6afcd8e9560ddf1b9a5032262a0be26540e85fb3"        # frozen: v4.16.5
+rev = "57217c394fff5064bedd48421fe4b6f5f73aad47"        # frozen: v4.19.2
 hooks = [{ id = "commitizen", stages = ["pre-push"] }]
 
 # ty
 [[repos]]
 repo = "https://github.com/astral-sh/ty-pre-commit"
-rev = "7f8502eb16c9a4b600cfb7fb069ae1154e21fbf9"    # frozen: v0.0.60
+rev = "a321b987e4b18c35c51d3051c1999349d2b37756"    # frozen: v0.0.88
 hooks = [{ id = "ty" }]
