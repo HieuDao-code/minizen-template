@@ -1,5 +1,5 @@
 [build-system]
-requires = ["uv_build>=0.11.7,<0.12"]
+requires = ["uv_build>=0.13.1,<0.14"]
 build-backend = "uv_build"
 
 [project]
@@ -45,18 +45,18 @@ dev = [
   { include-group = "test" },
   { include-group = "typing" },
 ]
-docs = ["zensical==0.0.51"]
-lint = ["ruff==0.15.22"]
-miscellaneous = ["prek==0.4.10"]
-release = ["commitizen==4.16.5"]
-security = ["zizmor==1.26.1"]
+docs = ["zensical==0.0.70"]
+lint = ["ruff==0.17.1"]
+miscellaneous = ["prek==0.5.5"]
+release = ["commitizen==4.19.2"]
+security = ["zizmor==1.31.0"]
 test = [
   "freezegun==1.5.5",
   "pytest==9.1.1",
   "pytest-cov==7.1.0",
-  "pytest-mock==3.15.1",
+  "pytest-mock==3.16.0",
 ]
-typing = ["ty==0.0.60"]
+typing = ["ty==0.0.88"]
 
 [tool.uv]
 exclude-newer = "1 week"
@@ -79,6 +79,7 @@ select = ["ALL"]
 ignore = [
   "B904",   # raise-without-from-inside-except
   "COM812", # missing-trailing-comma
+  "CPY001", # missing-copyright-notice
 ]
 
 [tool.ruff.lint.pydocstyle]
@@ -115,6 +116,7 @@ testpaths = ["tests"]
 env_list = ["py314", "commit-msg", "lint", "security", "typing"]
 
 [tool.tox.env_run_base]
+runner = "uv-venv-lock-runner"
 description = "Run tests"
 dependency_groups = ["dev"]
 commands = [["pytest"]]
