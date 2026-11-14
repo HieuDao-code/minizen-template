@@ -20,8 +20,8 @@
         ];
 
         shellHook = ''
-          if ! gh extension list 2>/dev/null | grep -q gh-actions-lock; then
-            gh extension install github/gh-actions-lock --pin v0.4.1
+          if ! gh extension list 2>/dev/null | grep -q "gh-actions-lock.*v0.4.1"; then
+            gh extension install github/gh-actions-lock --pin v0.4.1 --force
           fi
 
           if ! uv tool list 2>/dev/null | grep -q '^tox '; then

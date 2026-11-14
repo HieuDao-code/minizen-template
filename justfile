@@ -39,7 +39,7 @@ update:
     set -euo pipefail
     uv lock --upgrade
     prek update --freeze
-    gh actions-lock --relock
+    gh actions-lock
     until=$(date -u -d '7 days ago' +%Y-%m-%dT%H:%M:%SZ)
     sha=$(gh api "repos/NixOS/nixpkgs/commits?sha=nixpkgs-unstable&until=${until}&per_page=1" --jq '.[0].sha')
     nix flake lock --override-input nixpkgs "github:NixOS/nixpkgs/${sha}"

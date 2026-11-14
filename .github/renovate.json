@@ -6,6 +6,10 @@
   "ignorePresets": ["helpers:pinGitHubActionDigests"],
   "minimumReleaseAge": "7 days",
   "automerge": false,
+  // Version of gh-actions-lock Renovate uses to regenerate actions.lock; keep in sync with the other pins.
+  "constraints": {
+    "ghActionsLock": "v0.4.1"
+  },
   // flake.lock is updated by `just update`, which picks a nixpkgs commit at least 7 days old.
   "nix": {
     "enabled": false
@@ -20,9 +24,17 @@
   "customManagers": [
     {
       "customType": "regex",
-      "description": "Update the gh-actions-lock extension pinned in the lockfile workflow",
-      "managerFilePatterns": ["/^\\.github/workflows/lockfile\\.yml$/"],
-      "matchStrings": ["gh-actions-lock --pin (?<currentValue>v\\d+\\.\\d+\\.\\d+)"],
+      "description": "Keep every gh-actions-lock pin on the same version",
+      "managerFilePatterns": [
+        "/^\\.github/workflows/lockfile\\.yml$/",
+        "/^\\.github/renovate\\.json$/",
+        "/^flake\\.nix$/",
+        "/^README\\.md$/"
+      ],
+      "matchStrings": [
+        "gh-actions-lock(\\.\\*)?\\s*(--pin\\s+)?(?<currentValue>v\\d+\\.\\d+\\.\\d+)",
+        "\"ghActionsLock\":\\s*\"(?<currentValue>v\\d+\\.\\d+\\.\\d+)\""
+      ],
       "depNameTemplate": "github/gh-actions-lock",
       "datasourceTemplate": "github-releases"
     }

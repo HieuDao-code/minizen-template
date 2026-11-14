@@ -70,7 +70,7 @@ Hugo van Kemenade's "Lock your GitHub Actions" (2026-11-11).
    - Replace `pinact` with `gh` in `flake.nix`, and install the gh-actions-lock
      extension in the `shellHook` if it is missing.
    - In `justfile` `update`, replace `pinact run ...` with
-     `gh actions-lock --relock`. Action version bumps come from Renovate.
+     `gh actions-lock` (no `--relock`, which would accept upstream-moved tags). Action version bumps come from Renovate.
 6. **Docs.** Update the README setup steps: install gh-actions-lock, and
    optionally enable the "Require lockfile" policy.
 7. **Unstick Renovate PRs, keeping a 7-day cooldown everywhere, with no
