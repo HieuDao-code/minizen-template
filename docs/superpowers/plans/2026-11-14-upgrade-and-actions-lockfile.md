@@ -76,6 +76,9 @@ nix flakes, just.
   `minimum_prek_version` to the installed prek version
   (`uv run prek --version`).
 - [ ] **Step 4: Set uv to `0.13.7` in all three workflows.**
+- [ ] **Step 4b: Fix the commitizen `version_files` path.** Change it to
+  `src/minizen_template/__init__.py`, then check with
+  `uv run cz bump --dry-run --yes`. Expected: the output lists that file.
 - [ ] **Step 5: Verify.** Run `uv run tox` and `uv run prek run --all-files`.
   Expected: everything passes. If any zizmor findings appear here, ignore them;
   Task 2 handles them.
