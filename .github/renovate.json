@@ -1,11 +1,16 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   // https://docs.renovatebot.com/presets-config/#configbest-practices
-  "extends": ["config:best-practices", "config:semverAllMonthly"],
+  "extends": [
+    "config:best-practices",
+    "config:semverAllMonthly",
+    "schedule:automergeMonthly"
+  ],
   // Actions are locked by .github/workflows/actions.lock, so keep tag refs.
   "ignorePresets": ["helpers:pinGitHubActionDigests"],
   "minimumReleaseAge": "7 days",
-  "automerge": false,
+  // Merges only when all checks pass, after the 7-day minimum release age.
+  "automerge": true,
   // Version of gh-actions-lock Renovate uses to regenerate actions.lock; keep in sync with the other pins.
   "constraints": {
     "ghActionsLock": "v0.4.1"
