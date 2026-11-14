@@ -1,5 +1,3 @@
-minimum_prek_version = "0.5.10"
-
 [update]
 cooldown_days = 7
 
