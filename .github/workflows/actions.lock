@@ -16,6 +16,7 @@ workflows:
         - 'astral-sh/setup-uv@v10.3.3'
     '.github/workflows/release.yml':
         - 'actions/checkout@v7.0.1'
+        - 'astral-sh/setup-uv@v10.3.3'
         - 'commitizen-tools/commitizen-action@0.27.1'
     '.github/workflows/test.yml':
         - 'actions/checkout@v7.0.1'
