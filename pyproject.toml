@@ -1,5 +1,5 @@
 [build-system]
-requires = ["uv_build>=0.13.1,<0.14"]
+requires = ["uv_build>=0.13.7,<0.14"]
 build-backend = "uv_build"
 
 [project]
@@ -45,18 +45,18 @@ dev = [
   { include-group = "test" },
   { include-group = "typing" },
 ]
-docs = ["zensical==0.0.70"]
-lint = ["ruff==0.17.1"]
-miscellaneous = ["prek==0.5.5"]
-release = ["commitizen==4.19.2"]
-security = ["zizmor==1.31.0"]
+docs = ["zensical==0.1.0"]
+lint = ["ruff==0.17.4"]
+miscellaneous = ["prek==0.5.10"]
+release = ["commitizen==4.19.3"]
+security = ["zizmor==1.32.0"]
 test = [
   "freezegun==1.5.5",
-  "pytest==9.1.1",
+  "pytest==9.2.0",
   "pytest-cov==7.1.0",
-  "pytest-mock==3.16.0",
+  "pytest-mock==3.17.0",
 ]
-typing = ["ty==0.0.88"]
+typing = ["ty==0.0.99"]
 
 [tool.uv]
 exclude-newer = "1 week"
@@ -67,7 +67,7 @@ tag_format = "$version"
 version_scheme = "pep440"
 version_provider = "uv"
 update_changelog_on_bump = true
-version_files = ["src/minizen-template/__init__.py"]
+version_files = ["src/minizen_template/__init__.py"]
 breaking_change_exclamation_in_title = true
 major_version_zero = true
 
