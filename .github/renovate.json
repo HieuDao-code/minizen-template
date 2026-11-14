@@ -10,7 +10,7 @@
   "constraints": {
     "ghActionsLock": "v0.4.1"
   },
-  // flake.lock is updated by `just update`, which picks a nixpkgs commit at least 7 days old.
+  // flake.lock is updated by `just update`.
   "nix": {
     "enabled": false
   },
